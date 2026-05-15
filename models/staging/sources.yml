@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: cleaned_data
+    description: Cleaned Data from the 'data_usable' folder
+    tables:
+      - name: gsc_congestion_clean
+      - name: gsc_disruptions_events_clean
+      - name: gsc_industry_exposure_clean
+      - name: gsc_shipping_rates_clean
+      - name: gsc_trade_flows_clean
