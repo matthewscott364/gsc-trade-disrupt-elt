@@ -1,5 +1,5 @@
 SELECT 
-    CAST(DATE AS DATE) as shipping_date,
+    CAST('date' AS DATE) as shipping_date,
     'year',
     'month',
     'route',

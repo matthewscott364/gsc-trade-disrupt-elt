@@ -20,5 +20,3 @@ def ingest_data_to_sqlite(db_name='database.db'):
     conn.close()
 
 ingest_data_to_sqlite();
-
-

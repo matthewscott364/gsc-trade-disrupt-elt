@@ -1,5 +1,5 @@
 SELECT 
-    CAST(DATE AS DATE) AS disruption_date,
+    CAST('date' AS DATE) AS disruption_date,
     'year',
     LOWER(disruption_type) AS disruption_type,
     LOWER(region_affected) AS region_affected,
