@@ -1,3 +1,4 @@
+-- This model transforms the cleaned GSC trade flows data into a staging table with standardized formats and additional calculated fields for analysis.
 SELECT 
     "year",
     UPPER(exporter_country) AS exporter_country,

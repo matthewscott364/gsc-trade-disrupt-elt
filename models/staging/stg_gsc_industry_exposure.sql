@@ -1,3 +1,4 @@
+-- This model transforms the cleaned GSC industry exposure data into a staging table with standardized formats and calculated vulnerability tiers for analysis.
 SELECT 
     industry,
     region,

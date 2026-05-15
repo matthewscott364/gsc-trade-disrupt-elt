@@ -1,3 +1,4 @@
+-- This model transforms the cleaned GSC shipping rates data into a staging table with standardized formats and additional calculated fields for analysis.
 SELECT 
     CAST("date" AS DATE) AS shipping_date,
     "year",

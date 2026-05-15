@@ -1,3 +1,4 @@
+-- This model transforms the cleaned GSC congestion data into a staging table with standardized formats and additional calculated fields for analysis.
 SELECT 
     CAST(week_start AS DATE) AS week_start,
     port_name,

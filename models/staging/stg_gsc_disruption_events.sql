@@ -1,3 +1,4 @@
+-- This model transforms the cleaned GSC disruption events data into a staging table with standardized formats and additional calculated fields for analysis.
 SELECT 
     CAST("date" AS DATE) AS disruption_date,
     "year",
