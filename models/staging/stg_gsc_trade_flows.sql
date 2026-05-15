@@ -1,6 +1,6 @@
 SELECT 
-    'year',
-    UPPER(exporer_country) AS exporter_country,
+    "year",
+    UPPER(exporter_country) AS exporter_country,
     UPPER(importer_country) AS importer_country,
     exporter_country || ' -> ' || importer_country AS trade_lane,
     industry_sector,
