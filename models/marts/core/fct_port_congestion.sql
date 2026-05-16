@@ -1,6 +1,8 @@
 -- This model creates the fact table for port congestion, aggregating key metrics and indicators from the intermediate port stress data.
 SELECT
-    id AS port_congestion_id,
+    ROW_NUMBER() OVER (
+        ORDER BY congestion_date, port_name
+    ) AS port_congestion_id,
     congestion_date,
     congestion_year,
     port_name,

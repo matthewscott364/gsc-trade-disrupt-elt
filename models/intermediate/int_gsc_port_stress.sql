@@ -1,8 +1,8 @@
 -- This model calculates port congestion and stress levels based on the number of vessels waiting, average wait times, and port utilization rates. It categorizes ports into stress levels (normal, moderate, high, critical) to help identify bottlenecks in global supply chains.
 SELECT 
-    congestion_date,
-    congestion_year,
-    port_name,
+    week_start AS congestion_date,
+    CAST(strftime('%Y', week_start) AS INTEGER) AS congestion_year,
+    port AS port_name,
     region,
     vessels_waiting,
     avg_wait_days,

@@ -2,7 +2,7 @@ WITH industries AS (
     SELECT industry
     FROM {{ ref('stg_gsc_industry_exposure') }}
     UNION
-    SELECT trade_category AS industry
+    SELECT industry_sector AS industry
     FROM {{ ref('stg_gsc_trade_flows') }}
 )
 

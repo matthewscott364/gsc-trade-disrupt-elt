@@ -9,6 +9,6 @@ SELECT
     CAST(is_pandemic AS BOOLEAN) AS is_pandemic,
     CAST(is_geopolitical AS BOOLEAN) AS is_geopolitical,
     CAST(port_closure AS BOOLEAN) AS port_closure,
-    freight_cost_impact_pct,
+    freight_rate_shock_pct,
     trade_volume_impact_pct
 FROM {{ source('cleaned_data', 'gsc_disruption_events_clean') }}

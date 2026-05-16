@@ -1,6 +1,8 @@
 SELECT 
-    id AS trade_flow_id,
-    trade_year,
+    ROW_NUMBER() OVER (
+        ORDER BY "year", exporter_country, importer_country, industry_sector
+    ) AS trade_flow_id,
+    "year" AS trade_year,
     exporter_country,
     importer_country,
     trade_lane,
