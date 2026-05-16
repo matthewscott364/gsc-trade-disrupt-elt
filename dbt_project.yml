@@ -1,35 +1,30 @@
 name: 'gsc_trade_disrupt_elt'
 version: '1.0.0'
-config-version: 2
 
 profile: 'gsc_trade_disrupt_elt'
 
 model-paths: ["models"]
-analysis-paths: ["analyses"]
-test-paths: ["tests"]
 seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
+test-paths: ["tests"]
+analysis-paths: ["analyses"]
 
-target-path: "target"
 clean-targets:
   - "target"
   - "dbt_packages"
 
 models:
   gsc_trade_disrupt_elt:
-
-    # Staging Layer
     staging:
       +materialized: view
 
-    # Mart Layer
+    intermediate:
+      +materialized: view
+
     marts:
-      +materialized: table
+      core:
+        +materialized: table
 
-seeds:
-  gsc_trade_disrupt_elt:
-    +quote_columns: false
-
-tests:
-  +store_failures: true
+      reporting:
+        +materialized: table
