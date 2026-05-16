@@ -2,9 +2,9 @@
 WITH disruption AS (
     SELECT 
         disruption_year AS "year",
-        AVG(avg_disruption_severity) AS avg_disruption_severity,
+        AVG(avg_severity) AS avg_disruption_severity,
         SUM(disruption_count) AS total_disruptions,
-        AVG(avg_freight_cost_impact_pct) AS avg_freight_cost_impact_pct
+        AVG(avg_freight_rate_shock_pct) AS avg_freight_rate_shock_pct
     FROM {{ ref('int_gsc_disruption_impact') }}
     GROUP BY disruption_year
 ),
@@ -32,7 +32,7 @@ SELECT
     d."year",
     d.avg_disruption_severity,
     d.total_disruptions,
-    d.avg_freight_cost_impact_pct,
+    d.avg_freight_rate_shock_pct,
     t.avg_trade_risk_score,
     t.avg_industry_vulnerability,
     t.total_trade_value_usd,
