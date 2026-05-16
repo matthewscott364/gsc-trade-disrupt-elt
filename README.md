@@ -57,25 +57,34 @@ Tableau Dashboards
 
 ```text
 gsc-trade-disrupt-elt/
-│
+├── analyses/*
+├── data/*
+├── data_usable/*
+├── macros/*
 ├── models/
 │   ├── staging/
 │   ├── intermediate/
 │   └── marts/
 │       ├── core/
 │       └── reporting/
-│
-├── seeds/
-├── macros/
-├── snapshots/
-├── tests/
-├── analyses/
-│
+├── seeds/*
+├── snapshots/*
+├── tests/*
+├── data_clean_1.ipynb
+├── data_clean_2.ipynb
+├── data_clean_3.ipynb
+├── data_clean_4.ipynb
+├── data_clean_5.ipynb
+├── data_ingest.ipynb
 ├── gsc_trade_disrupt.db
 ├── dbt_project.yml
 ├── profiles.yml
 └── README.md
 ```
+
+---
+
+# ERD Diagram
 
 ---
 
