@@ -86,6 +86,8 @@ gsc-trade-disrupt-elt/
 
 # ERD Diagram
 
+![ER Diagram](assets/er_diagram.png)
+
 ---
 
 # Data Sources
